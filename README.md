@@ -4,7 +4,7 @@ Synchronize files and folders between servers -using inotiy and rsync with c++
 
 服务器实时同步文件，服务器镜像解决方案
 
-这个工程是原sersync项目在[google code](http://code.google.com/p/sersync/)的拷贝, 在此基础上进行源码分析与注释, 可能会进行干净开发, 仅做学习之用.
+这个工程是原sersync项目在[google code](http://code.google.com/p/sersync/)的拷贝, 在此基础上进行源码分析与注释, 可能会进行二次开发, 仅做学习之用.
 
 参考文章
 
