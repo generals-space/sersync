@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="69">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles" displayName="头文件" projectFiles="true">
+      <itemPath>CdnRefreshInterface.h</itemPath>
+      <itemPath>CommandInterface.h</itemPath>
+      <itemPath>Daemon.h</itemPath>
+      <itemPath>FileSynchronize.h</itemPath>
+      <itemPath>Initialize.h</itemPath>
+      <itemPath>Inotify.h</itemPath>
+      <itemPath>Interface.h</itemPath>
+      <itemPath>QueueFilter.h</itemPath>
+      <itemPath>QueueRetry.h</itemPath>
+      <itemPath>SocketInterface.h</itemPath>
+      <itemPath>main.h</itemPath>
+      <itemPath>xmlParser.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles" displayName="源文件" projectFiles="true">
+      <itemPath>CdnRefreshInterface.cpp</itemPath>
+      <itemPath>CommandInterface.cpp</itemPath>
+      <itemPath>FileSynchronize.cpp</itemPath>
+      <itemPath>Initialize.cpp</itemPath>
+      <itemPath>Inotify.cpp</itemPath>
+      <itemPath>Interface.cpp</itemPath>
+      <itemPath>QueueFilter.cpp</itemPath>
+      <itemPath>QueueRetry.cpp</itemPath>
+      <itemPath>SocketInterface.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+      <itemPath>xmlParser.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles" displayName="资源文件" projectFiles="true">
+      <itemPath>dist/Release/GNU-Linux-x86/confxml.xml</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles" displayName="重要文件" projectFiles="false">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>GNU|GNU</compilerSet>
+        <platform>2</platform>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>/usr/local/include</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/sersync2</output>
+          <linkerAddLib>
+            <pElem>lib</pElem>
+            <pElem>/usr/local/lib</pElem>
+          </linkerAddLib>
+          <stripSymbols>true</stripSymbols>
+          <linkerLibItems>
+            <linkerOptionItem>-static</linkerOptionItem>
+            <linkerLibLibItem>boost_thread</linkerLibLibItem>
+            <linkerLibLibItem>boost_regex</linkerLibLibItem>
+            <linkerLibLibItem>boost_date_time</linkerLibLibItem>
+            <linkerLibStdlibItem>PosixThreads</linkerLibStdlibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <packaging>
+        <packType>Tar</packType>
+        <additionalOptions>-f</additionalOptions>
+        <packTopDir>sersync2.4tar</packTopDir>
+        <packFileList>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/confxml.xml"
+                            from="confxml.xml"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+        </packFileList>
+      </packaging>
+    </conf>
+  </confs>
+</configurationDescriptor>

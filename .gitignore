@@ -1,0 +1,4 @@
+dist/GNU-Linux-x86/sersync
+dist/GNU-Linux-x86/sersync2
+*.o
+*.o.d
